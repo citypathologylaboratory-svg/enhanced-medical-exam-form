@@ -1,6 +1,5 @@
 import React from 'react';
 import './globals.css';
-import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       </header>
       <section className="form-section">
         <h2>PRE EMPLOYMENT MEDICAL CHECK UP</h2>
-        {/* Medical examination form will be implemented here */}
       </section>
       <section className="doctor-details">
         <h3>Our Medical Professionals</h3>
@@ -29,15 +27,86 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Image Section - Added in the middle of the body */}
-      <section className="image-section" style={{ textAlign: 'center', margin: '40px 0' }}>
-        <Image 
-          src="/image.jpg" 
-          alt="Medical Services" 
-          width={800} 
-          height={600}
-          style={{ maxWidth: '100%', height: 'auto' }}
-        />
+      {/* Medical Examination Form Box - Replacing Image Section */}
+      <section className="medical-form-box" style={{ maxWidth: '900px', margin: '40px auto', border: '2px solid #000', padding: '30px', backgroundColor: '#fff' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+          <div>
+            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>DATE</label>
+            <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+          </div>
+          <div style={{ gridColumn: 'span 2' }}>
+            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>NAME</label>
+            <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+          </div>
+        </div>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+          <div>
+            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>AGE</label>
+            <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+          </div>
+          <div>
+            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>GENDER</label>
+            <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+          </div>
+          <div>
+            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>Height (cm)</label>
+            <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+          </div>
+        </div>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+          <div>
+            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>Weight (Kg)</label>
+            <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+          </div>
+          <div>
+            <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>B.P. (mm)</label>
+            <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+          </div>
+          <div></div>
+        </div>
+        
+        <div style={{ marginBottom: '20px' }}>
+          <h3 style={{ borderBottom: '2px solid #000', paddingBottom: '10px', marginBottom: '15px' }}>Systemic examination</h3>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+            <div>
+              <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>Respiratory system</label>
+              <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+            </div>
+            <div>
+              <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>Cardiovascular Syst.</label>
+              <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+            </div>
+            <div>
+              <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>Elementary Syst.</label>
+              <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+            </div>
+            <div>
+              <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>Vision</label>
+              <input type="text" style={{ width: '100%', padding: '8px', border: '1px solid #000' }} />
+            </div>
+          </div>
+        </div>
+        
+        <div style={{ marginBottom: '20px' }}>
+          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>Remarks</label>
+          <textarea style={{ width: '100%', padding: '8px', border: '1px solid #000', minHeight: '80px' }}></textarea>
+        </div>
+        
+        <div>
+          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>Recommendation</label>
+          <div style={{ display: 'flex', gap: '30px', padding: '10px' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <input type="radio" name="recommendation" value="FIT" />
+              <span style={{ fontWeight: 'bold' }}>FIT</span>
+            </label>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <input type="radio" name="recommendation" value="UNFIT" />
+              <span style={{ fontWeight: 'bold' }}>UNFIT</span>
+            </label>
+          </div>
+        </div>
       </section>
       
       <section className="services">
