@@ -1,5 +1,6 @@
 import React from 'react';
 import './globals.css';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -8,12 +9,10 @@ export default function Home() {
         <h1>CITY HEALTH AND INDUSTRIAL SERVICES</h1>
         <p>2ND FLOOR DWARKESH CHAMBERS NEAR BUS STAND HALOL</p>
       </header>
-
       <section className="form-section">
         <h2>PRE EMPLOYMENT MEDICAL CHECK UP</h2>
         {/* Medical examination form will be implemented here */}
       </section>
-
       <section className="doctor-details">
         <h3>Our Medical Professionals</h3>
         <div className="doctors">
@@ -29,7 +28,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
+      {/* Image Section - Added in the middle of the body */}
+      <section className="image-section" style={{ textAlign: 'center', margin: '40px 0' }}>
+        <Image 
+          src="/image.jpg" 
+          alt="Medical Services" 
+          width={800} 
+          height={600}
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
+      </section>
+      
       <section className="services">
         <h3>Our Services</h3>
         <div className="services-grid">
@@ -46,7 +56,6 @@ export default function Home() {
           <div className="service-item">TITMUS VISION SCREENING FACILITY</div>
         </div>
       </section>
-
       <section className="about">
         <p>
           We and our Subsidiaries are one of the most Reputed go to Choice for
@@ -54,13 +63,12 @@ export default function Home() {
           its Periphery. We are Located in the Heart of Halol.
         </p>
       </section>
-
       <footer className="footer">
         <div className="contact">
-          <p>📞 02676 222811</p>
-          <p>📱 91 94092 77144</p>
-          <p>✉️ info@citypathlab.in</p>
-          <p>🌐 www.citypathlab.in</p>
+          📞 02676 222811
+          📱 91 94092 77144
+          ✉️ info@citypathlab.in
+          🌐 www.citypathlab.in
         </div>
       </footer>
     </div>
